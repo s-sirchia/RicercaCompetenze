@@ -1,0 +1,2178 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontologia "http://www.competenze.com/ontologia#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.competenze.com/ontologia#"
+     xml:base="http://www.competenze.com/ontologia"
+     xmlns:ontologia="http://www.competenze.com/ontologia#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.competenze.com/ontologia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.competenze.com/ontologia#appartiene_a -->
+
+    <owl:ObjectProperty rdf:about="&ontologia;appartiene_a">
+        <rdfs:range rdf:resource="&ontologia;Cluster"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#include -->
+
+    <owl:ObjectProperty rdf:about="&ontologia;include">
+        <rdfs:domain rdf:resource="&ontologia;Cluster"/>
+        <owl:inverseOf rdf:resource="&ontologia;appartiene_a"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#tag -->
+
+    <owl:ObjectProperty rdf:about="&ontologia;tag">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <owl:inverseOf rdf:resource="&ontologia;tag"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.competenze.com/ontologia#ha_difficolta -->
+
+    <owl:DatatypeProperty rdf:about="&ontologia;ha_difficolta">
+        <rdfs:domain rdf:resource="&ontologia;Cluster"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#ha_durata -->
+
+    <owl:DatatypeProperty rdf:about="&ontologia;ha_durata">
+        <rdfs:domain rdf:resource="&ontologia;Cluster"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#nome -->
+
+    <rdf:Description rdf:about="&ontologia;nome"/>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#valore -->
+
+    <rdf:Description rdf:about="&ontologia;valore"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Array-based -->
+
+    <owl:Class rdf:about="&ontologia;Array-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Cluster -->
+
+    <owl:Class rdf:about="&ontologia;Cluster"/>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Command_line -->
+
+    <owl:Class rdf:about="&ontologia;Command_line">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Concorrente -->
+
+    <owl:Class rdf:about="&ontologia;Concorrente">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Dataflow -->
+
+    <owl:Class rdf:about="&ontologia;Dataflow">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Dichiarativo -->
+
+    <owl:Class rdf:about="&ontologia;Dichiarativo">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Documento -->
+
+    <owl:Class rdf:about="&ontologia;Documento">
+        <rdfs:subClassOf rdf:resource="&ontologia;Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Educativo -->
+
+    <owl:Class rdf:about="&ontologia;Educativo">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Extension -->
+
+    <owl:Class rdf:about="&ontologia;Extension">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Funzionale_Impuro -->
+
+    <owl:Class rdf:about="&ontologia;Funzionale_Impuro">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Imperativo -->
+
+    <owl:Class rdf:about="&ontologia;Imperativo">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Interactive -->
+
+    <owl:Class rdf:about="&ontologia;Interactive">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Interrogazione -->
+
+    <owl:Class rdf:about="&ontologia;Interrogazione">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Iterativo -->
+
+    <owl:Class rdf:about="&ontologia;Iterativo">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Linguaggio -->
+
+    <owl:Class rdf:about="&ontologia;Linguaggio"/>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Linguaggio_di_Markup -->
+
+    <owl:Class rdf:about="&ontologia;Linguaggio_di_Markup">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Linguaggio_di_Programmazione -->
+
+    <owl:Class rdf:about="&ontologia;Linguaggio_di_Programmazione">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#List-based -->
+
+    <owl:Class rdf:about="&ontologia;List-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Logic-based -->
+
+    <owl:Class rdf:about="&ontologia;Logic-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Metaprogramming -->
+
+    <owl:Class rdf:about="&ontologia;Metaprogramming">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Orientato_agli_oggetti -->
+
+    <owl:Class rdf:about="&ontologia;Orientato_agli_oggetti">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Parola_Chiave -->
+
+    <owl:Class rdf:about="&ontologia;Parola_Chiave"/>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Procedurale -->
+
+    <owl:Class rdf:about="&ontologia;Procedurale">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Prodotto -->
+
+    <owl:Class rdf:about="&ontologia;Prodotto"/>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Rule-based -->
+
+    <owl:Class rdf:about="&ontologia;Rule-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Scripting -->
+
+    <owl:Class rdf:about="&ontologia;Scripting">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Software -->
+
+    <owl:Class rdf:about="&ontologia;Software">
+        <rdfs:subClassOf rdf:resource="&ontologia;Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Web-based -->
+
+    <owl:Class rdf:about="&ontologia;Web-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Web_Client -->
+
+    <owl:Class rdf:about="&ontologia;Web_Client">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Web_Server -->
+
+    <owl:Class rdf:about="&ontologia;Web_Server">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#XML-based -->
+
+    <owl:Class rdf:about="&ontologia;XML-based">
+        <rdfs:subClassOf rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Ada -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Ada">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">ada</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+        <appartiene_a rdf:resource="&ontologia;Embedded"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+        <appartiene_a rdf:resource="&ontologia;Real-Time_Computing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Android -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Android">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">21</ha_durata>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <nome xml:lang="it">android</nome>
+        <include rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;Android_BackEnd"/>
+        <include rdf:resource="&ontologia;Android_Vetrina"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;XML"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Android_Aggregatore_Fonti -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Android_Aggregatore_Fonti">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione android aggregatore di fonti</nome>
+        <appartiene_a rdf:resource="&ontologia;Android"/>
+        <appartiene_a rdf:resource="&ontologia;Scraping"/>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <tag rdf:resource="&ontologia;aggregare"/>
+        <tag rdf:resource="&ontologia;backend"/>
+        <tag rdf:resource="&ontologia;dati"/>
+        <tag rdf:resource="&ontologia;fonte"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;mobile"/>
+        <tag rdf:resource="&ontologia;server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Android_BackEnd -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Android_BackEnd">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione android con back end</nome>
+        <appartiene_a rdf:resource="&ontologia;Android"/>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <tag rdf:resource="&ontologia;android"/>
+        <tag rdf:resource="&ontologia;applicazione"/>
+        <tag rdf:resource="&ontologia;backend"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;inviare"/>
+        <tag rdf:resource="&ontologia;mobile"/>
+        <tag rdf:resource="&ontologia;salvare"/>
+        <tag rdf:resource="&ontologia;server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Android_Vetrina -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Android_Vetrina">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione android vetrina</nome>
+        <appartiene_a rdf:resource="&ontologia;Android"/>
+        <tag rdf:resource="&ontologia;android"/>
+        <tag rdf:resource="&ontologia;applicazione"/>
+        <tag rdf:resource="&ontologia;mobile"/>
+        <tag rdf:resource="&ontologia;mostrare"/>
+        <tag rdf:resource="&ontologia;sponsorizzare"/>
+        <tag rdf:resource="&ontologia;sponsorizzato"/>
+        <tag rdf:resource="&ontologia;vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Applicazione_Desktop_Interfaccia_Grafica -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Applicazione_Desktop_Interfaccia_Grafica">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione desktop generica con interfaccia grafica</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Interfaccia_Grafica"/>
+        <tag rdf:resource="&ontologia;desktop"/>
+        <tag rdf:resource="&ontologia;generico"/>
+        <tag rdf:resource="&ontologia;gui"/>
+        <tag rdf:resource="&ontologia;programma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Applicazione_Desktop_Testuale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Applicazione_Desktop_Testuale">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione desktop generica testuale</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <tag rdf:resource="&ontologia;desktop"/>
+        <tag rdf:resource="&ontologia;generico"/>
+        <tag rdf:resource="&ontologia;testuale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#BASIC -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;BASIC">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">basic</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#C -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;C">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">c</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#COBOL -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;COBOL">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">cobol</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#CSS -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;CSS">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Web-based"/>
+        <nome xml:lang="it">css</nome>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#CSharp -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;CSharp">
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Iterativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">c#</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Interfaccia_Grafica"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#CUDA -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;CUDA">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Client-server -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Client-server">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <nome xml:lang="it">client-server</nome>
+        <include rdf:resource="&ontologia;Perl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Co-array_Fortran -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Co-array_Fortran">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">co-array fortran</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+        <appartiene_a rdf:resource="&ontologia;Scientifico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Computazione_Numerica -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Computazione_Numerica">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">28</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">computazione numerica</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+        <include rdf:resource="&ontologia;Co-array_Fortran"/>
+        <include rdf:resource="&ontologia;Fortran"/>
+        <include rdf:resource="&ontologia;MATLAB"/>
+        <include rdf:resource="&ontologia;Mathematica"/>
+        <include rdf:resource="&ontologia;R"/>
+        <include rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Concorrente -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Concorrente">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">21</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">Concorrente</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+        <include rdf:resource="&ontologia;Co-array_Fortran"/>
+        <include rdf:resource="&ontologia;Concurrent_Pascal"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;MultiLisp"/>
+        <include rdf:resource="&ontologia;Scala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Concurrent_Pascal -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Concurrent_Pascal">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">concurrent pascal</nome>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#DOS_batch_language -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;DOS_batch_language">
+        <rdf:type rdf:resource="&ontologia;Command_line"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">dos batch language</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Data_Mining -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Data_Mining">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">data mining</nome>
+        <include rdf:resource="&ontologia;Mathematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Delphi -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Delphi">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <nome xml:lang="it">delphi</nome>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Documentazione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Documentazione">
+        <rdf:type rdf:resource="&ontologia;Documento"/>
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <nome xml:lang="it">documentazione</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+        <tag rdf:resource="&ontologia;documentazione"/>
+        <tag rdf:resource="&ontologia;guida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Embedded -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Embedded">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">embedded</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+        <include rdf:resource="&ontologia;Modula-2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Fortran -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Fortran">
+        <rdf:type rdf:resource="&ontologia;Array-based"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">fortran</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Scientifico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#General_Purpose -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;General_Purpose">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">general purpose</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+        <include rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+        <include rdf:resource="&ontologia;Applicazione_Desktop_Testuale"/>
+        <include rdf:resource="&ontologia;BASIC"/>
+        <include rdf:resource="&ontologia;C"/>
+        <include rdf:resource="&ontologia;COBOL"/>
+        <include rdf:resource="&ontologia;CSharp"/>
+        <include rdf:resource="&ontologia;Fortran"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;JavaScript"/>
+        <include rdf:resource="&ontologia;Lisp"/>
+        <include rdf:resource="&ontologia;Lua"/>
+        <include rdf:resource="&ontologia;Modula-2"/>
+        <include rdf:resource="&ontologia;MultiLisp"/>
+        <include rdf:resource="&ontologia;Pascal"/>
+        <include rdf:resource="&ontologia;Perl"/>
+        <include rdf:resource="&ontologia;Python"/>
+        <include rdf:resource="&ontologia;Ruby"/>
+        <include rdf:resource="&ontologia;Scala"/>
+        <include rdf:resource="&ontologia;C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Gestionale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Gestionale">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">applicazione gestionale</nome>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+        <tag rdf:resource="&ontologia;database"/>
+        <tag rdf:resource="&ontologia;dati"/>
+        <tag rdf:resource="&ontologia;gestione"/>
+        <tag rdf:resource="&ontologia;gestire"/>
+        <tag rdf:resource="&ontologia;programma"/>
+        <tag rdf:resource="&ontologia;salvare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Gestione_Dati -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Gestione_Dati">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">gestione dati</nome>
+        <include rdf:resource="&ontologia;Android_BackEnd"/>
+        <include rdf:resource="&ontologia;Gestionale"/>
+        <include rdf:resource="&ontologia;Prograph"/>
+        <include rdf:resource="&ontologia;SPARQL"/>
+        <include rdf:resource="&ontologia;SQL"/>
+        <include rdf:resource="&ontologia;SQLite"/>
+        <include rdf:resource="&ontologia;XML"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#HTML -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;HTML">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Markup"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Web_Client"/>
+        <nome xml:lang="it">html</nome>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Intelligenza_Artificiale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Intelligenza_Artificiale">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">28</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">intelligenza artificiale</nome>
+        <include rdf:resource="&ontologia;MATLAB"/>
+        <include rdf:resource="&ontologia;Mathematica"/>
+        <include rdf:resource="&ontologia;Prolog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Interfaccia_Grafica -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Interfaccia_Grafica">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <ha_durata xml:lang="it">7</ha_durata>
+        <nome xml:lang="it">interfaccia grafica</nome>
+        <include rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+        <include rdf:resource="&ontologia;CSharp"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;Visual_Basic"/>
+        <include rdf:resource="&ontologia;C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Java -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Java">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <rdf:type rdf:resource="&ontologia;Web_Client"/>
+        <nome xml:lang="it">java</nome>
+        <appartiene_a rdf:resource="&ontologia;Android"/>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Interfaccia_Grafica"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#JavaScript -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;JavaScript">
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Web_Client"/>
+        <nome xml:lang="it">javascript</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#LaTex -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;LaTex">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Markup"/>
+        <nome xml:lang="it">latex</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Libro -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Libro">
+        <rdf:type rdf:resource="&ontologia;Documento"/>
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <nome xml:lang="it">libro</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+        <tag rdf:resource="&ontologia;libro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Linguistica_Computazionale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Linguistica_Computazionale">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">linguistica computazionale</nome>
+        <include rdf:resource="&ontologia;Prolog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Lisp -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Lisp">
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;List-based"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <nome xml:lang="it">lisp</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Lua -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Lua">
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Iterativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">lua</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#MATLAB -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;MATLAB">
+        <rdf:type rdf:resource="&ontologia;Array-based"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">matlab</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;Intelligenza_Artificiale"/>
+        <appartiene_a rdf:resource="&ontologia;Scientifico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Mathematica -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Mathematica">
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Rule-based"/>
+        <nome xml:lang="it">mathematica</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;Data_Mining"/>
+        <appartiene_a rdf:resource="&ontologia;Intelligenza_Artificiale"/>
+        <appartiene_a rdf:resource="&ontologia;Scientifico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Modula-2 -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Modula-2">
+        <rdf:type rdf:resource="&ontologia;Educativo"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">modula-2</nome>
+        <appartiene_a rdf:resource="&ontologia;Embedded"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#MultiLisp -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;MultiLisp">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">multilisp</nome>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Multimediale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Multimediale">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">multimediale</nome>
+        <include rdf:resource="&ontologia;Perl"/>
+        <include rdf:resource="&ontologia;Pure_Data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Object_Oriented -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Object_Oriented">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">21</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">orientato agli oggetti</nome>
+        <include rdf:resource="&ontologia;CSharp"/>
+        <include rdf:resource="&ontologia;Delphi"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;Lua"/>
+        <include rdf:resource="&ontologia;Modula-2"/>
+        <include rdf:resource="&ontologia;PHP"/>
+        <include rdf:resource="&ontologia;Perl"/>
+        <include rdf:resource="&ontologia;Python"/>
+        <include rdf:resource="&ontologia;Ruby"/>
+        <include rdf:resource="&ontologia;Scala"/>
+        <include rdf:resource="&ontologia;C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#OpenCL -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;OpenCL">
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">opencl</nome>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#PHP -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;PHP">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Iterativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <rdf:type rdf:resource="&ontologia;Web_Server"/>
+        <nome xml:lang="it">php</nome>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Parallelo -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Parallelo">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">28</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">parallelo</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+        <include rdf:resource="&ontologia;CUDA"/>
+        <include rdf:resource="&ontologia;Co-array_Fortran"/>
+        <include rdf:resource="&ontologia;Java"/>
+        <include rdf:resource="&ontologia;MultiLisp"/>
+        <include rdf:resource="&ontologia;OpenCL"/>
+        <include rdf:resource="&ontologia;Scala"/>
+        <include rdf:resource="&ontologia;C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Pascal -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Pascal">
+        <rdf:type rdf:resource="&ontologia;Educativo"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">pascal</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Perl -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Perl">
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">perl</nome>
+        <appartiene_a rdf:resource="&ontologia;Client-server"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Multimediale"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Scientifico"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Prograph -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Prograph">
+        <rdf:type rdf:resource="&ontologia;Dataflow"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">prograph</nome>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Prolog -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Prolog">
+        <rdf:type rdf:resource="&ontologia;Dichiarativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Logic-based"/>
+        <rdf:type rdf:resource="&ontologia;Rule-based"/>
+        <nome xml:lang="it">prolog</nome>
+        <appartiene_a rdf:resource="&ontologia;Intelligenza_Artificiale"/>
+        <appartiene_a rdf:resource="&ontologia;Linguistica_Computazionale"/>
+        <appartiene_a rdf:resource="&ontologia;Rappresentazione_Conoscenza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Pubblicazione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Pubblicazione">
+        <rdf:type rdf:resource="&ontologia;Documento"/>
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <nome xml:lang="it">pubblicazione</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+        <tag rdf:resource="&ontologia;pubblicazione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Pure_Data -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Pure_Data">
+        <rdf:type rdf:resource="&ontologia;Dataflow"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">pure data</nome>
+        <appartiene_a rdf:resource="&ontologia;Multimediale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Python -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Python">
+        <rdf:type rdf:resource="&ontologia;Array-based"/>
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Iterativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">python</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#R -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;R">
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;List-based"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">r</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Rappresentazione_Conoscenza -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Rappresentazione_Conoscenza">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">28</ha_durata>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <nome xml:lang="it">rappresentazione della conoscenza</nome>
+        <include rdf:resource="&ontologia;Prolog"/>
+        <include rdf:resource="&ontologia;SPARQL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Real-Time_Computing -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Real-Time_Computing">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">computazione real-time</nome>
+        <include rdf:resource="&ontologia;Ada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Ruby -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Ruby">
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">ruby</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#SGML -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;SGML">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Markup"/>
+        <nome xml:lang="it">sgml</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#SPARQL -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;SPARQL">
+        <rdf:type rdf:resource="&ontologia;Dichiarativo"/>
+        <rdf:type rdf:resource="&ontologia;Interrogazione"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">sparql</nome>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+        <appartiene_a rdf:resource="&ontologia;Rappresentazione_Conoscenza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#SQL -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;SQL">
+        <rdf:type rdf:resource="&ontologia;Dichiarativo"/>
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Interrogazione"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">sql</nome>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#SQLite -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;SQLite">
+        <rdf:type rdf:resource="&ontologia;Interrogazione"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">sqlite</nome>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Scala -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Scala">
+        <rdf:type rdf:resource="&ontologia;Concorrente"/>
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <nome xml:lang="it">scala</nome>
+        <appartiene_a rdf:resource="&ontologia;Concorrente"/>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Scientifico -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Scientifico">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">35</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">scientifico</nome>
+        <include rdf:resource="&ontologia;Co-array_Fortran"/>
+        <include rdf:resource="&ontologia;Fortran"/>
+        <include rdf:resource="&ontologia;MATLAB"/>
+        <include rdf:resource="&ontologia;Mathematica"/>
+        <include rdf:resource="&ontologia;Perl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Scraping -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Scraping">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">21</ha_durata>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <nome xml:lang="it">scraping</nome>
+        <include rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;XPath"/>
+        <include rdf:resource="&ontologia;XQuery"/>
+        <include rdf:resource="&ontologia;XSLT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Script -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Script">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">script</nome>
+        <include rdf:resource="&ontologia;DOS_batch_language"/>
+        <include rdf:resource="&ontologia;Lua"/>
+        <include rdf:resource="&ontologia;PHP"/>
+        <include rdf:resource="&ontologia;Perl"/>
+        <include rdf:resource="&ontologia;Python"/>
+        <include rdf:resource="&ontologia;R"/>
+        <include rdf:resource="&ontologia;Ruby"/>
+        <include rdf:resource="&ontologia;Script_automatizzato_desktop"/>
+        <include rdf:resource="&ontologia;Script_automatizzato_web"/>
+        <include rdf:resource="&ontologia;Windows_PowerShell"/>
+        <include rdf:resource="&ontologia;bash"/>
+        <include rdf:resource="&ontologia;sh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Script_automatizzato_desktop -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Script_automatizzato_desktop">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">script automatizzato desktop</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+        <tag rdf:resource="&ontologia;automatico"/>
+        <tag rdf:resource="&ontologia;lanciare"/>
+        <tag rdf:resource="&ontologia;script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Script_automatizzato_web -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Script_automatizzato_web">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">script automizzato web</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <tag rdf:resource="&ontologia;automatico"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;lanciare"/>
+        <tag rdf:resource="&ontologia;script"/>
+        <tag rdf:resource="&ontologia;server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Server -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Server">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">2</ha_difficolta>
+        <nome xml:lang="it">server</nome>
+        <include rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;Android_BackEnd"/>
+        <include rdf:resource="&ontologia;PHP"/>
+        <include rdf:resource="&ontologia;Script_automatizzato_web"/>
+        <include rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;Sito_BackEnd"/>
+        <include rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Sito -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Sito">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">sito</nome>
+        <include rdf:resource="&ontologia;CSS"/>
+        <include rdf:resource="&ontologia;HTML"/>
+        <include rdf:resource="&ontologia;JavaScript"/>
+        <include rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <include rdf:resource="&ontologia;Sito_BackEnd"/>
+        <include rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Sito_Aggregatore_Fonti -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Sito_Aggregatore_Fonti">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">sito web aggregatore di fonti</nome>
+        <appartiene_a rdf:resource="&ontologia;Scraping"/>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+        <tag rdf:resource="&ontologia;aggregare"/>
+        <tag rdf:resource="&ontologia;dati"/>
+        <tag rdf:resource="&ontologia;fonte"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;sito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Sito_BackEnd -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Sito_BackEnd">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">sito web con back end</nome>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+        <tag rdf:resource="&ontologia;backend"/>
+        <tag rdf:resource="&ontologia;dati"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;inviare"/>
+        <tag rdf:resource="&ontologia;sito"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Sito_Vetrina -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Sito_Vetrina">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">sito web vetrina</nome>
+        <appartiene_a rdf:resource="&ontologia;Sito"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;mostrare"/>
+        <tag rdf:resource="&ontologia;sito"/>
+        <tag rdf:resource="&ontologia;sponsorizzare"/>
+        <tag rdf:resource="&ontologia;sponsorizzato"/>
+        <tag rdf:resource="&ontologia;vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Stesura_Testi -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Stesura_Testi">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">14</ha_durata>
+        <ha_difficolta xml:lang="it">1</ha_difficolta>
+        <nome xml:lang="it">stesura testi</nome>
+        <include rdf:resource="&ontologia;Documentazione"/>
+        <include rdf:resource="&ontologia;LaTex"/>
+        <include rdf:resource="&ontologia;Libro"/>
+        <include rdf:resource="&ontologia;Pubblicazione"/>
+        <include rdf:resource="&ontologia;SGML"/>
+        <include rdf:resource="&ontologia;Tex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Tex -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Tex">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Markup"/>
+        <nome xml:lang="it">tex</nome>
+        <appartiene_a rdf:resource="&ontologia;Stesura_Testi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Tool_analisi_grafica_di_dati_numerici -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Tool_analisi_grafica_di_dati_numerici">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">tool per analisi grafica di dati numerici</nome>
+        <appartiene_a rdf:resource="&ontologia;Computazione_Numerica"/>
+        <tag rdf:resource="&ontologia;analisi"/>
+        <tag rdf:resource="&ontologia;analizzare"/>
+        <tag rdf:resource="&ontologia;analizzato"/>
+        <tag rdf:resource="&ontologia;dati"/>
+        <tag rdf:resource="&ontologia;grafici"/>
+        <tag rdf:resource="&ontologia;numerico"/>
+        <tag rdf:resource="&ontologia;strumento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Visual_Basic -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Visual_Basic">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">visual basic</nome>
+        <appartiene_a rdf:resource="&ontologia;Interfaccia_Grafica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Web-service -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Web-service">
+        <rdf:type rdf:resource="&ontologia;Cluster"/>
+        <ha_durata xml:lang="it">21</ha_durata>
+        <ha_difficolta xml:lang="it">3</ha_difficolta>
+        <nome xml:lang="it">web service</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Web_Server -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Web_Server">
+        <rdf:type rdf:resource="&ontologia;Prodotto"/>
+        <rdf:type rdf:resource="&ontologia;Software"/>
+        <nome xml:lang="it">web server</nome>
+        <appartiene_a rdf:resource="&ontologia;Server"/>
+        <tag rdf:resource="&ontologia;backend"/>
+        <tag rdf:resource="&ontologia;internet"/>
+        <tag rdf:resource="&ontologia;inviare"/>
+        <tag rdf:resource="&ontologia;salvare"/>
+        <tag rdf:resource="&ontologia;server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#Windows_PowerShell -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;Windows_PowerShell">
+        <rdf:type rdf:resource="&ontologia;Extension"/>
+        <rdf:type rdf:resource="&ontologia;Interactive"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">windows powershell</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#XML -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;XML">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Markup"/>
+        <nome xml:lang="it">xml</nome>
+        <appartiene_a rdf:resource="&ontologia;Android"/>
+        <appartiene_a rdf:resource="&ontologia;Gestione_Dati"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#XPath -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;XPath">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;XML-based"/>
+        <nome xml:lang="it">xpath</nome>
+        <appartiene_a rdf:resource="&ontologia;Scraping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#XQuery -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;XQuery">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;XML-based"/>
+        <nome xml:lang="it">xquery</nome>
+        <appartiene_a rdf:resource="&ontologia;Scraping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#XSLT -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;XSLT">
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;XML-based"/>
+        <nome xml:lang="it">xslt</nome>
+        <appartiene_a rdf:resource="&ontologia;Scraping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#aggregare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;aggregare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">aggregare</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#analisi -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;analisi">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">analisi</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#analizzare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;analizzare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">analizza</valore>
+        <valore xml:lang="it">analizzare</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#analizzato -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;analizzato">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">analizzata</valore>
+        <valore xml:lang="it">analizzate</valore>
+        <valore xml:lang="it">analizzati</valore>
+        <valore xml:lang="it">analizzato</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#android -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;android">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">android</valore>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#applicazione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;applicazione">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">app</valore>
+        <valore xml:lang="it">applicazione</valore>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#automatico -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;automatico">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">automatica</valore>
+        <valore xml:lang="it">automatiche</valore>
+        <valore xml:lang="it">automatici</valore>
+        <valore xml:lang="it">automatico</valore>
+        <valore xml:lang="it">automatizzata</valore>
+        <valore xml:lang="it">automatizzate</valore>
+        <valore xml:lang="it">automatizzati</valore>
+        <valore xml:lang="it">automatizzato</valore>
+        <tag rdf:resource="&ontologia;Script_automatizzato_desktop"/>
+        <tag rdf:resource="&ontologia;Script_automatizzato_web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#backend -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;backend">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">back end</valore>
+        <valore xml:lang="it">back-end</valore>
+        <valore xml:lang="it">backend</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Sito_BackEnd"/>
+        <tag rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#bash -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;bash">
+        <rdf:type rdf:resource="&ontologia;Command_line"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Scripting"/>
+        <nome xml:lang="it">bash</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#database -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;database">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">base di dati</valore>
+        <valore xml:lang="it">database</valore>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#dati -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;dati">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">dati</valore>
+        <valore xml:lang="it">informazioni</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+        <tag rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Sito_BackEnd"/>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#desktop -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;desktop">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">desktop</valore>
+        <valore xml:lang="it">pc</valore>
+        <valore xml:lang="it">personal computer</valore>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Testuale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#documentazione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;documentazione">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">documentazione</valore>
+        <tag rdf:resource="&ontologia;Documentazione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#fonte -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;fonte">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">fonte</valore>
+        <valore xml:lang="it">fonti</valore>
+        <valore xml:lang="it">sorgente</valore>
+        <valore xml:lang="it">sorgenti</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#generico -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;generico">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">general purpose</valore>
+        <valore xml:lang="it">generico</valore>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Testuale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#gestione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;gestione">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">gestione</valore>
+        <valore xml:lang="it">organizzazione</valore>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#gestire -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;gestire">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">gestire</valore>
+        <valore xml:lang="it">gestisce</valore>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#grafici -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;grafici">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">diagramma</valore>
+        <valore xml:lang="it">grafici</valore>
+        <valore xml:lang="it">grafico</valore>
+        <valore xml:lang="it">istogramma</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#gui -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;gui">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">gui</valore>
+        <valore xml:lang="it">interfaccia grafica</valore>
+        <valore xml:lang="it">interfaccia user friendly</valore>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#guida -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;guida">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">guida</valore>
+        <valore xml:lang="it">guida utente</valore>
+        <valore xml:lang="it">manuale</valore>
+        <tag rdf:resource="&ontologia;Documentazione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#internet -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;internet">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">internet</valore>
+        <valore xml:lang="it">on-line</valore>
+        <valore xml:lang="it">online</valore>
+        <valore xml:lang="it">rete</valore>
+        <valore xml:lang="it">web</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Script_automatizzato_web"/>
+        <tag rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Sito_BackEnd"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+        <tag rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#inviare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;inviare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">invia</valore>
+        <valore xml:lang="it">inviare</valore>
+        <valore xml:lang="it">manda</valore>
+        <valore xml:lang="it">mandare</valore>
+        <valore xml:lang="it">trasmette</valore>
+        <valore xml:lang="it">trasmettere</valore>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Sito_BackEnd"/>
+        <tag rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#lanciare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;lanciare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">esegue</valore>
+        <valore xml:lang="it">eseguire</valore>
+        <valore xml:lang="it">lancia</valore>
+        <valore xml:lang="it">lanciare</valore>
+        <tag rdf:resource="&ontologia;Script_automatizzato_desktop"/>
+        <tag rdf:resource="&ontologia;Script_automatizzato_web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#libro -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;libro">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">libro</valore>
+        <tag rdf:resource="&ontologia;Libro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#mobile -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;mobile">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">mobile</valore>
+        <valore xml:lang="it">per smartphone</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#mostrare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;mostrare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">mostra</valore>
+        <valore xml:lang="it">mostrare</valore>
+        <valore xml:lang="it">visualizza</valore>
+        <valore xml:lang="it">visualizzare</valore>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#numerico -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;numerico">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">numerica</valore>
+        <valore xml:lang="it">numeriche</valore>
+        <valore xml:lang="it">numerici</valore>
+        <valore xml:lang="it">numerico</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#programma -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;programma">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">applicativo</valore>
+        <valore xml:lang="it">programma</valore>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Interfaccia_Grafica"/>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#pubblicazione -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;pubblicazione">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">articolo</valore>
+        <valore xml:lang="it">pubblicazione</valore>
+        <valore xml:lang="it">trattato</valore>
+        <tag rdf:resource="&ontologia;Pubblicazione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#salvare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;salvare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">memorizza</valore>
+        <valore xml:lang="it">memorizzare</valore>
+        <valore xml:lang="it">salva</valore>
+        <valore xml:lang="it">salvare</valore>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Gestionale"/>
+        <tag rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#script -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;script">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">script</valore>
+        <tag rdf:resource="&ontologia;Script_automatizzato_desktop"/>
+        <tag rdf:resource="&ontologia;Script_automatizzato_web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#server -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;server">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">server</valore>
+        <tag rdf:resource="&ontologia;Android_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Android_BackEnd"/>
+        <tag rdf:resource="&ontologia;Script_automatizzato_web"/>
+        <tag rdf:resource="&ontologia;Web_Server"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#sh -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;sh">
+        <rdf:type rdf:resource="&ontologia;Command_line"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <nome xml:lang="it">sh</nome>
+        <appartiene_a rdf:resource="&ontologia;Script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#sito -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;sito">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">pagina</valore>
+        <valore xml:lang="it">pagine</valore>
+        <valore xml:lang="it">siti</valore>
+        <valore xml:lang="it">sito</valore>
+        <tag rdf:resource="&ontologia;Sito_Aggregatore_Fonti"/>
+        <tag rdf:resource="&ontologia;Sito_BackEnd"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#sponsorizzare -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;sponsorizzare">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">pubblicizza</valore>
+        <valore xml:lang="it">pubblicizzare</valore>
+        <valore xml:lang="it">sponsorizza</valore>
+        <valore xml:lang="it">sponsorizzare</valore>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#sponsorizzato -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;sponsorizzato">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">pubblicizzata</valore>
+        <valore xml:lang="it">pubblicizzate</valore>
+        <valore xml:lang="it">pubblicizzati</valore>
+        <valore xml:lang="it">pubblicizzato</valore>
+        <valore xml:lang="it">sponsorizzata</valore>
+        <valore xml:lang="it">sponsorizzate</valore>
+        <valore xml:lang="it">sponsorizzati</valore>
+        <valore xml:lang="it">sponsorizzato</valore>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#strumento -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;strumento">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">strumento</valore>
+        <valore xml:lang="it">tool</valore>
+        <tag rdf:resource="&ontologia;Tool_analisi_grafica_di_dati_numerici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#testuale -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;testuale">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">command line</valore>
+        <valore xml:lang="it">linea di comando</valore>
+        <valore xml:lang="it">shell</valore>
+        <valore xml:lang="it">testuale</valore>
+        <tag rdf:resource="&ontologia;Applicazione_Desktop_Testuale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#vetrina -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;vetrina">
+        <rdf:type rdf:resource="&ontologia;Parola_Chiave"/>
+        <valore xml:lang="it">vetrina</valore>
+        <tag rdf:resource="&ontologia;Android_Vetrina"/>
+        <tag rdf:resource="&ontologia;Sito_Vetrina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.competenze.com/ontologia#C++ -->
+
+    <owl:NamedIndividual rdf:about="&ontologia;C++">
+        <rdf:type rdf:resource="&ontologia;Funzionale_Impuro"/>
+        <rdf:type rdf:resource="&ontologia;Imperativo"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio"/>
+        <rdf:type rdf:resource="&ontologia;Linguaggio_di_Programmazione"/>
+        <rdf:type rdf:resource="&ontologia;Metaprogramming"/>
+        <rdf:type rdf:resource="&ontologia;Orientato_agli_oggetti"/>
+        <rdf:type rdf:resource="&ontologia;Procedurale"/>
+        <nome xml:lang="it">c++</nome>
+        <appartiene_a rdf:resource="&ontologia;General_Purpose"/>
+        <appartiene_a rdf:resource="&ontologia;Interfaccia_Grafica"/>
+        <appartiene_a rdf:resource="&ontologia;Object_Oriented"/>
+        <appartiene_a rdf:resource="&ontologia;Parallelo"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

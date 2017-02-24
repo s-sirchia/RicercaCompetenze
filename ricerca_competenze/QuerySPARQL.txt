@@ -1,0 +1,58 @@
+/*Restituisce i cluster per che includono il linguaggio X*/
+
+SELECT ?Cluster
+WHERE{
+    
+     ?Ling "http://www.competenze.com/ontologia#nome" X@it    
+     ?Ling "http://www.competenze.com/ontologia#appartiene_a" ?Cluster
+}
+
+X=Variabile penso stringa nome del linguaggio
+
+
+/*Restituisce i cluster che hanno come tag Y*/
+
+?Cluster
+WHERE{
+      
+     ?Tag "http://www.competenze.com/ontologia#valore" Y  
+     ?Software "http://www.competenze.com/ontologia#tag" ?Tag
+     ?Software "http://www.competenze.com/ontologia#appartiene_a" ?Cluster
+     
+
+}
+
+Y=Variabile penso stringa che corrisponde al tag
+
+
+/*Restituisce i cluster che hanon come frase chiave Z*/
+
+SELECT ?Cluster
+WHERE{
+       
+     ?Cluster "http://www.competenze.com/ontologia#valore" Z@it
+
+}
+
+Z=Variabile penso stringa che corrisponde alla parola chiave o frase chiave
+
+
+
+SELECT ?Diff
+WHERE{
+    
+    ?Soft "http://www.competenze.com/ontologia#ha_difficolta" ?Diff.
+    ?Soft "http://www.competenze.com/ontologia#nome" ?X@it
+}
+
+?X=Nome del software di cui voglio sapere la difficoltà
+
+
+SELECT ?Durata
+WHERE{
+    
+    ?Soft "http://www.competenze.com/ontologia#ha_durata" ?Durata.
+    ?Soft "http://www.competenze.com/ontologia#nome" ?X@it
+}
+
+?X=Nome del software di cui voglio sapere la dueata
