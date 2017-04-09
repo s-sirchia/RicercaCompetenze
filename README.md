@@ -1,7 +1,7 @@
 # RicercaCompetenze
-#Il contesto
+# Il contesto
 Il mondo della gestione progettuale, qualsiasi sia la natura del prodotto che si vuole produrre, è caratterizzato da diverse problematiche, più o meno gravi, che possono influire sulla buona pianificazione delle attività di progettazione e produzione. La tematica che abbiamo deciso di affrontare riguarda principalmente la creazione dei team di lavoro a cui affidare lo sviluppo di un progetto. Una cattiva scelta del personale può impattare su costi e sui tempi dello sviluppo, così come sulla qualità prodotto.
 
-#La nostra proposta
+# La nostra proposta
 L'idea progettuale proposta consiste nella realizzazione di un sistema di supporto alla gestione di progetti software con l'obiettivo di ridurre le difficoltà sopra citate, da parte di un responsabile o di un project manager, nel selezionare le persone adatte per lo svolgimento e la realizzazione di un progetto. Il cuore del sistema quindi consiste nel suggerire al project manager, tra un pool di programmatori, un gruppo di persone tali che le loro conoscenze ricoprano le competenze necessarie richieste dal progetto con lo scopo aggiuntivo di minimizzare il costo necessario per la realizzazione. Inizialmente sono stati considerati diversi approcci per la realizzazione del sistema: tool offline manuale, tool online manuale, automatico o semi-automatico, etc.
 L'approccio da noi seguito è stato quello  semiautomatico, che ha portato il nostro tool a diventare una piattaforma online dove i Project Manager possono creare degli annunci per i propri progetti, e i programmatori possono iscriversi a uno o più progetti sponsorizzati sulla piattaforma. A questo punto il Project Manager puo gestire le proprie proposte, analizzando le iscrizioni ricevute e richiedendo al sistema la generazione automatica del miglior team possibile, in termini di qualita delle competenze possedute e risparmio economico.
